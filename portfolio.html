@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/a42c5381b9.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <!-- <p>Full Stack Devloper</p> -->
+                <h1>Hi,I'm <span>Meet</span><br> Gami from Charusat</h1>
+            </div>
+
+        </div>
+    </div>
+<!-- ----------------about----------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/photo3.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>web-Design</span><br>I have experience in building dynamic web applications using HTML, CSS, and JavaScript, and I'm proficient in backend development with Node.js and MongoDB, while also skilled in frontend development with React.</li>
+                            <li><span>Java</span><br>I have a solid understanding of Java programming, including object-oriented principles, data structures, and algorithms, enabling me to develop robust and efficient applications.</li>
+                            <li><span>Sports</span><br>I enjoy playing cricket, specializing in fast right-arm bowling.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <p>During my pursuit of a BTech degree, I have developed a strong foundation in various programming languages including C, C++, Java, HTML, CSS, and JavaScript. Additionally, I have honed my problem-solving abilities through extensive practice in Data Structures and Algorithms. My coursework has also provided me with hands-on experience in database management. Although my professional experience is limited, I am enthusiastic about applying my skills and knowledge to real-world projects.</p>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>SSC</span><br>I completed my SSC degree in 2020 from the Gujarat Board in Amreli.</li>
+                            <li><span>HSC</span><br>I completed my HSC degree in 2022 from the Gujarat Board in Amreli</li>
+                            <li><span>B-TECH(IT)</span><br>I am currently pursuing my BTech degree at CHARUSAT and will complete it in 2026.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------services------------ -->
+
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Custom website development tailored to showcase your photography portfolio.
+                        Creation of visually stunning galleries to display your work online.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Software Development</h2>
+                    <p>Development of photo editing software or applications to streamline your workflow.
+                        Creation of custom solutions for organizing and managing your photography projects and client galleries.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-camera-retro"></i>
+                    <h2>Photo Editing</h2>
+                    <p>Offering expert photo editing and retouching services to enhance your images. Specializing in imperfection removal and meticulous adjustments for polished results.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ---------------contact ------------------------------ -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                  <h1 class="sub-title"> Contact Me</h1>
+                  <p><i class="fa-solid fa-paper-plane"></i> meetgami099@gmail.com</p>
+                  <p> <i class="fa-solid fa-square-phone"></i> +91-7859930725</p>
+                  <div class="social-icons">
+                    <a href="https://www.instagram.com/meet_gami_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/MeetGami099" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/meet-gami-621a97284/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+
+            </div>
+            <div class="contact-right">
+                   <form >
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message"  cols="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                   </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Meet.</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+   {
+    for(tablink of tablinks)
+    {
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents)
+    {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+   }
+
+</script>
+</body>
+</html>
